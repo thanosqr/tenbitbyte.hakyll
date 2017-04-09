@@ -1,16 +1,19 @@
 ---
 title: Equality in Prolog and you
 short_title: Equality in Prolog and you
+status: ready
 ---
 Once upon a time, a friend of mine searched for the equality operator in prolog: he entered `=` in SWI-Prolog's predicate search. The results?
 
-`(=)/2`
-`(=..)/2`
-`(=<)/2`
-`(==)/2`
-`(=@=)/2`
-`(=:=)/2`
-`(=\=)/2`
+~~~
+(=)/2
+(=..)/2
+(=<)/2
+(==)/2
+(=@=)/2
+(=:=)/2
+(=\=)/2
+~~~
 
 To be fair, `(=<)/2` is for comparison, `(=\=)/2` is not equal and `(=../2)` is a special operator that is only loosely related to equality. 
 Still, that leaves 4 operators - 5 if we consider the infamous `is/2`.
@@ -40,8 +43,8 @@ Contrast with ` 1 == 1.0` which returns false; therefore you cannot always repla
 ### =@=
 To quote the manual:
 
-    +Term1 =@= +Term2
-    True if Term1 is a variant of (or structurally equivalent to) Term2. Testing for a variant is weaker than equivalence (==/2), but stronger than unification (=/2). Two terms A and B are variants iff there exists a renaming of the variables in A that makes A equivalent (==) to B and vice versa.
+> +Term1 =@= +Term2  
+> True if Term1 is a variant of (or structurally equivalent to) Term2. Testing for a variant is weaker than equivalence (==/2), but stronger than unification (=/2). Two terms A and B are variants iff there exists a renaming of the variables in A that makes A equivalent (==) to B and vice versa.
 
 Will you ever need it? Probably not.
  
@@ -49,12 +52,12 @@ Will you ever need it? Probably not.
 ### =..
 Closing with this operator just because it was mentioned. It is not really an operator related to equality; it is called the `univ` operator and is used to construct/deconstruct terms:
 
-```prolog
+~~~
 ?- foo(4,2) =.. L.
 L = [foo, 4, 2].
 ?- X =.. [foo, 4, 2].
 X = foo(4, 2).
- ```
+~~~
 
 And you can call X by doing call(X). It's quite exciting and useful for constructing terms at runtime, with the usual pitfalls of eval-like functions.  
 However, I wouldn't recommend using it, especially if you are new to prolog; if you need to use it, 

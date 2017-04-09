@@ -1,6 +1,7 @@
 ---
-title: Functional and Logic programming differences
+title: Functional and logic programming differences
 short_title: Logic vs Function
+status: ready
 ---
 
 When I was first introduced to logic programming it was hard to pinpoint how exactly it was different compared to functional programming.
@@ -49,7 +50,7 @@ abs(x)-->
    if x>0 x else -x
 ```
 
-but you cannot write
+but you cannot write:
 ```
 abs(x)-->
    x>0,
