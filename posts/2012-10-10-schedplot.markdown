@@ -6,7 +6,7 @@ status: ready
 
 ## What's a Schedplot?
 
-Schedplot (__sched__uler __plot__ter) is a profiler for Erlang programs I developed for my thesis during the last year. 
+Schedplot (SCHEDuler PLOTter) is a profiler for Erlang programs I developed for my thesis during the last year. 
 It visualizes the workload of Erlang's schedulers, which can be used to detect bottlenecks and scalability issues in multicore architectures.
 
 In other words, Schedplot aspires to answer a simple question: why a program doesn’t run twice as fast if the number of available processors is doubled?
@@ -56,7 +56,6 @@ Symmetrically, the height is zero if and only if the scheduler is 0% active.
 ## So now what?
 
 Well, if you are still interested you can:
-
-* Check the [presentation](/files/schedplot-pres.pdf)
-* Get the [code](https://github.com/thanosqr/schedplot)
-* Read the [thesis](http://artemis-new.cslab.ece.ntua.gr:8080/jspui/bitstream/123456789/6427/1/DT2012-0198.pdf#page=7) (Pages 1-6 are in Greek, rest in English)
+1. Check the [presentation](/files/schedplot-pres.pdf)
+2. Get the [code](https://github.com/thanosqr/schedplot)
+3. Read the [thesis](http://artemis-new.cslab.ece.ntua.gr:8080/jspui/bitstream/123456789/6427/1/DT2012-0198.pdf#page=7) (Pages 1-6 are in Greek, rest in English)
